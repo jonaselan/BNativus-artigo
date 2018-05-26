@@ -1,0 +1,118 @@
+% Cap�tulo 2
+\chapter{Fundamentação Teórica}
+
+Neste capítulo será exposto os conceitos teóricos bases utilizados na construção do sistema. É válido ressaltar que cada um deles foram escolhidos mediante as experiências durante o curso.
+
+
+\section{Validação da Ideia}
+
+A ideia do sistema originou-se da necessidade observada dentro do curso de TADS, onde uma parte dos alunos não conseguiam se expressar bem no língua inglesa, seja através da fala ou escrita. Isso acontecia até mesmo com aqueles que sabiam entender bem (leitura ou escuta). Essa é uma realidade no que diz respeito ao estudo de línguas, e podem ocorrer por diversos motivos. Segundo Paul Wilson, um estudioso de línguas da Faculdade de Filosofia e Línguas, que realizou estudos em diversas salas de aulas na Polônia, “Os alunos que estão em sala de aula possuem um bloqueio quando falam, em outra língua e em público, pois possuem medo de errar e que seus colegas o zombe” [4]. Logo, a vergonha tem grande influência negativa no processo de aprendizagem”. Isso se reflete na realidade do curso de TADS, pois a leitura e a escuta, que teoricamente são habilidades que podem ser desenvolvidas sozinhas, são uma das primeiras a serem adquiridas.
+
+Eles podem ser enquadrados no nível intermediário e avançar nos estudos se mostra complicado, por vezes. Isso acontece pelo problema de Platô. Nele, o estudante em questão sente que não evolui ao alcançar o nível intermediário, principalmente porque no começo a quantidade de informações adquiridas se mostrava maior [5].
+
+Tendo isso em mente, foi iniciada uma pesquisa averiguando se um sistema que auxiliasse esse perfil de estudante seria utilizado e qual seria a didática mais útil de ensino para os usuários finais. Primeiramente, foi feito um balanço geral com os professores da DIATINF, que ajudaram a amadurecer mais a ideia, fazendo assim que a problemática fosse vista sob novas óticas. Depois foi feita a validação junto aos usuários finais: alunos do IFRN. Para isso, além de uma conversa com alunos de TADS, foi criado um formulário com alguns questionamentos, para saber a opinião dos entrevistados em relação às funcionalidades propostas. O formulário foi divulgado nos grupos do IFRN (DIATINF e Spotted 2.0) e na UFRN (no grupo de bacharelado em tecnologia da informação). Foram obtidas 71 respostas, no período de 1 mês. O resultado de algumas perguntas podem ser conferidos a seguir:
+
+\begin{figure}[htb]
+	\centering
+  	\includegraphics[scale=0.55]{src/imagens/graf1.png}
+  	\textsf{\caption{Resultado da pesquisar referente a maior dificuldade dos estudantes entrevistados ao estudar uma língua estrangeira}}
+  	\label{fig:FiguraTeste}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+  	\includegraphics[scale=0.55]{src/imagens/graf2.png}
+  	\textsf{\caption{Uma outra pessoa para praticar (85.9\%), confiança para falar outra língua na presença de outra(s) pessoa(s) (46.5\%), gramática (26.8\%)}}
+  	\label{fig:FiguraTeste}
+\end{figure}
+
+Com essa duas perguntas direcionadas, foi possível validar as funcionalidades de criação de salas de conversas, uma vez que a maior dificuldade constatada é a fala e a confiança ao se expressar em público. Com as salas virtuais, é possível que estes problemas sejam amenizados, uma vez que o usuário não estaria na frente de ninguém, apenas de um dispositivo conectado à internet, conversando com outras pessoas.
+
+\begin{figure}[htb]
+	\centering
+  	\includegraphics[scale=0.60]{src/imagens/graf3.png}
+  	\textsf{\caption{Inglês (87.3\%), francês (47.9\%), espanhol (46.5\%))}}
+  	\label{fig:FiguraTeste}
+\end{figure}
+
+Com o resultado deste questionamento, foi possível direcionar quais são as línguas de estudos mais frequentes no pelos possíveis usuários do sistema, e assim, possibilitar a tradução para todas essas línguas, além do Português.
+
+É importante ressaltar que o BNativus foi iniciado com o intuito de ajudar os brasileiros, porém estruturado visando a escalabilidade em nível internacional. Por isso, foi criado um pequeno formulário para divulgação em fóruns estrangeiros. No entanto, não houve um feedback considerável.
+
+\section{MVP (Minimal-Viable-Product)}
+
+O Produto mínimo viável (em inglês, Minimum Viable Product) é a versão mais simples de um produto que pode ser disponibilizada para a validação de um pequeno conjunto de hipóteses sobre um negócio.
+
+Com esse conceito, bastante difundido dentro dos ambientes tecnológicos e de empreendedorismo, evita-se desperdício de tempo, esforço e dinheiro desenvolvendo algo que não vai atender às expectativas almejadas. Isso acontece, inclusive, em momentos em que a equipe conhece as regras de negócio relacionadas ao produto. O MVP ajuda nessa validação, orientação e no aprendizado, da forma mais rápida possível.
+
+A ideia de MVP está originalmente vinculada aos conceitos popularizados pelo estilo Toyota de manufatura enxuta, no entanto teve maior alcance a partir da publicação do livro de Eric Ries (2011), obraCom o resultado deste questionamento, foi possível direcionar quais são as línguas de estudos mais frequentes no pelos possíveis usuários do sistema, e assim, possibilitar a tradução para todas essas línguas, além do Português.
+
+A ideia de MVP está originalmente vinculada aos conceitos popularizados pelo estilo Toyota de manufatura enxuta, no entanto teve maior alcance a partir da publicação do livro de Eric Ries (2011), obra essa que possui o mesmo nome do autor, durante o movimento Lean Startup. Seu objetivo é validação do primeiro passo do produto mínimo, bem menos elaborado do que sua versão final, o que é bem diferente quando comparamos com produtos criados da forma tradicional, que normalmente têm um período longo de criação de protótipo, de análise e de elaboração. O MVP foca no produto mínimo, mas que já é viável e usual, de modo que verificações possam ser feitas no grupo inicial de funcionalidades necessárias para o processo de validação de hipóteses e aprendizagem sobre o produto [2].
+
+\section{Ruby e Ruby on Rails}
+
+O Ruby on Rails é um framework para desenvolvimento de aplicações WEB. Criado por David Heinemeier Hansson, a ferramenta é oriunda de um produto de sua empresa, o Basecamp, em 2003. Desde então, ele se tornou muito influente e famoso, levando também a linguagem Ruby, anteriormente apenas conhecida no Japão e em poucos lugares dos Estados Unidos, a um patamar mundial.
+
+Essa popularidade deve-se a vários fatores. Um dos principais é o fato de ser construído na linguagem de programação Ruby. Esta foi criada pelo programador e escritor Yukihiro “Matz” Matsumoto. O objetivo dele ao criar esta linguagem, em 1995, foi a de facilitar ao máximo o seu uso e o desenvolvimento com ela, levando ao programador a sensação de diversão. Matz usou a linguagem de programação Perl como inspiração, com várias referências a Smalltalk, Eiffel e Ada.
+
+Quanto ao Rails, na época em que foi lançado, trouxe uma visão diferente ao desenvolvimento Web. Naquele momento, desenvolver para Web era cansativo, pois os frameworks eram complexos, de difícil configuração, e que acabavam por criar sistemas difíceis de se manter e de baixa qualidade. [3]
+
+David, também conhecido por DHH, ao desenvolver o Basecamp, pensou principalmente nos seguintes aspectos:
+
+\begin{itemize}
+   \item \textit{“Convention over configuration” ou "convenção à configuração"} -- procura-se um padrão a configuração do sistema;
+   \item \textit{“Don’t Repeat Yourself”, ou “não se repita"} -- deve-se evitar a repetição de código, pensando sempre no seu reaproveitamento;
+   \item \textit{Automação de tarefas repetidas} -- preferir resolver uma tarefa crucial e interessante do que uma tarefa repetitiva e sem grande valor para o produto. De preferência essa última deve ser automatizada, assim aumentando a produtividade do desenvolvedor.
+\end{itemize}
+
+Esse conjunto de ideias e práticas, acabou por trazer uma maior facilidade ao desenvolvimento. É possível construir, em pouco tempo, produtos relativamente complexos. E isso foi provado pelo próprio DHH em um vídeo publicado em 2005, onde ele constrói um Blog totalmente do zero. Muitos outros framework, posteriormente, se inspiraram no Rails, como o Laravel (2011).
+
+
+\section{DevOps}
+
+A palavra Devops originou-se da junção das palavras desenvolvedor e operação (developer and operation). Em sua definição, o Devops é uma metodologia de desenvolvimento de software que busca explorar a comunicação, a colaboração e a integração entre os desenvolvedores de software e profissionais de TI. Seu objetivo é possibilitar que a construção de sistemas se torne mais rápida e organizada, possibilitando a entrega de resultados de forma eficaz. 
+
+Esse processo padroniza o ambiente de desenvolvimento, e eventos podem ser acompanhados com maior facilidade, em ordem de manter o sistema, que já está em produção sempre atualizado. Com isso, o desenvolvedor consegue uma maior tranquilidade enquanto desenvolve,  mas sem se desligar do todo, pois processos de implantação ou testes, por exemplo, são executados automaticamente. O objetivo é automatizar a maior quantidade possível de processos operacionais, sem que eles percam a coesão.
+
+O uso de práticas Devops agiliza o processo de desenvolvimento por privilegiar (mas não ignorar):
+
+\begin{itemize}
+   \item Indivíduos e interações mais do que processos e ferramentas;
+   \item Produto ou serviço funcionando mais que ter documentação abrangente;
+   \item Colaboração com o cliente mais que negociação de contratos;
+   \item Responder às mudanças mais que seguir o plano pré-definido.
+\end{itemize}
+
+O modelo se torna responsivo a mudanças comuns no desenvolvimento, e justamente por isso é ideal para softwares que são constantemente atualizados, eles não ficam presos a moldes travados. A agilidade, além de reduzir o tempo para as entregas, libera tempo para execução de testes, que aumenta a quantidade de defeitos identificados, o que aumenta a qualidade do produto/serviço.
+
+\section{AWS}
+
+AWS (ou Amazon Web Services) é uma plataforma de serviços na nuvem, criada em 2006, que oferece soluções para armazenamento, redes e computação, em várias camadas. Atualmente existem diversos serviços da AWS para cada uma dessas necessidades citadas. Os que mais se destacam (e mais antigos) são o EC2 (Elastic Cloud Computer), que oferece servidores virtuais, e o S3 (Simple Storage Service), para armazenamento de arquivos. Todos os demais serviços da AWS funcionam muito bem juntos, uma vez que foram projetados para conseguirem se integrar, de modo seja possível utilizar e administrar os mais variados recursos de infraestrutura da sua aplicação, de forma descomplicada e individualmente.
+
+Uma característica importante dos serviços da AWS é que você paga somente pelo recurso usado; não há um valor mensal fixo, ou seja, conforme a demanda, em inglês pay-per-use. E o controle pode ser feito através de uma interface web, ou também por APIs (nas mais diversas linguagens, como Python, Ruby e PHP) e linha de comando [6].
+
+A Amazon foi a pioneira no área da computação em nuvem, chegando com uma solução que muitas empresas necessitavam: Construir sistemas escaláveis com a ausência de data centers físicos dentro da empresas. Essas questões podem ser terceirizadas para a Amazon. E com a arquitetura estabelecidas por eles, a estabilidade acaba sendo certa. 1) Eles possuem data centers espalhados por todo o mundo; 2) O acesso será bem mais rápido, pois os servidores serão acionados conforme a localização dos usuários, usando a zona mais próxima dele e que possui o sistema instalado, diminuindo, assim, o tempo de resposta; 3) aplicações podem ser executadas em servidores diferentes dentro de uma região, e quando, que está sendo usado por você, parar de funcionar, outro é levantado e faz a entrega das requisições para o usuário.
+
+
+\section{Scrum}
+
+Scrum é uma metodologia ágil para gestão e planejamento de projetos de software. Ela foi criada nos anos 90, no entanto só se popularizou na década seguinte, sendo usado no mundo todo. Com isso, se tornou superior, em números de uso em empresas, do que métodos tradicionais, como o XP [8]. E essas organizações são as mais variadas, desde startups à multinacionais. Isso ocorre porque ela possui uma metodologia maleável, que não se aplica unicamente a software, embora tenha sido concebido com essa finalidade.
+
+No Scrum, os projetos são divididos em ciclos, chamados de Sprints, que possuem um tempo definido para serem finalizadas, e que variam de acordo com a equipe e tamanho do projeto. As funcionalidades a serem implementadas são mantidas em uma lista que é conhecida como Backlog. No início de cada Sprint é realizado uma reunião de planejamento na qual o Product Owner prioriza itens dessa lista e a equipe atribui às atividades. Com uma certa frequência, é necessário que seja realizado uma breve reunião, para que assim todos possam ter conhecimento do que está sendo feito e, consequentemente, identificar impedimentos e priorizar atividades. Ao final de um Sprint, a equipe apresenta as funcionalidades implementadas, analisa o que foi feito e prepara-se o próximo ciclo. A imagem abaixo exemplifica o processo [9]:
+
+\begin{figure}[htb]
+	\centering
+  	\includegraphics[scale=0.60]{src/imagens/scrum.png}
+  	\textsf{\caption{Esquema do funcionamento do Scrum}}
+  	\label{fig:FiguraTeste}
+\end{figure}
+
+\section{Testes Unitários}
+
+Test-Driven Development (TDD) é uma das práticas de desenvolvimento de software sugeridas por diversas metodologias ágeis, como XP. A ideia por trás dele é bem simples: escrever testes antes mesmo de escrever o código de produção. Dessa forma, o desenvolvedor garante que boa parte do seu sistema tem um teste que aumenta a garantia do seu funcionamento [14]. A prática de TDD agrega muitos benefícios ao processo de desenvolvimento.
+
+Muitos são os benefícios da utilização do TDD. Uma das principais diz respeito a qualidade externa do produto. A bateria de testes automatizados gerados pela prática dão mais segurança ao desenvolvedor na hora de mudanças, pois garante que possíveis erros gerados ao se construir uma grande funcionalidade, ou modificar alguma coisa, sejam logo identificados. Além disso, escrever testes de unidade forçará o desenvolvedor a escrever um código de maior qualidade pois, para escrever bons testes unitários, o desenvolvedor é obrigado a fazer bom uso de orientação a objetos. A prática ajuda a escrever um bom software, com um nível qualidade superior, mais fácil de ser mantido e evoluído.
+
+A mecânica na prática se baseia no ciclo Vermelho-Verde-Refatorar. Quando se inicia uma tarefa, é preciso inicialmente criar um teste unitário, que nada mais é do que um trecho de código que deixa claro o que determinado trecho de código deve fazer. Como não foi implantado da funcionalidade em si, o teste irá falhar. O desenvolvedor então trabalha com o mínimo necessário para fazer esse teste passar. A próximo fazer é a refatoração desse código é melhorar o código que já está escrito. A cabeça do desenvolvedor é complicada: quando ele está focado em implementar a funcionalidade, ele raramente está pensando também em qualidade de código. Não tem jeito, é assim que funcionamos. E justamente por isso que, após a implementação da funcionalidade, o desenvolvedor para e melhora a qualidade do código (que já funciona e atende ao requisito do negócio) [14].
+
+

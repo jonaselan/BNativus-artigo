@@ -1,0 +1,185 @@
+% Pre-ambulo
+\documentclass[a4paper, 12pt]{abnt}
+
+%% Pacotes para texto em Ingl�s
+% \usepackage[brazil]{babel}
+% \usepackage[T1]{fontenc}
+% \usepackage[latin1]{inputenc}
+ 
+%% Pacotes para texto em Portugues
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+ 
+\usepackage{dsfont}
+\usepackage{amssymb,amsmath}
+\usepackage{multirow}
+\usepackage[alf]{abntcite}
+\usepackage[pdftex]{color, graphicx}
+\usepackage{colortbl} 
+\usepackage{url}
+\usepackage{abnt-alf}
+\usepackage{abntcite}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{todonotes}
+%\usepackage{alg} 
+%\usepackage{hyperref}
+
+
+% Redefinicao de instrucoes
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
+\renewcommand{\algorithmicensure}{\textbf{Sa��da:}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicthen}{\textbf{ent��o}}
+\renewcommand{\algorithmicelse}{\textbf{sen��o}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{fa��a}}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicloop}{\textbf{loop}}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{at�� que}}
+\renewcommand{\algorithmiccomment}[1]{\% #1}
+
+
+% Definicao da lista de simbolos
+% \simb[entrada na lista de simbolos]{simbolo}:
+% Escreve o simbolo no texto e uma entrada na lista de simbolos.
+% Se o parametro opcional e omitido, usa-se o parametro obrigatorio.
+\newcommand{\simb}[2][]
+{%
+	\ifthenelse{\equal{#1}{}}
+	{\addcontentsline{los}{simbolo}{#2}}
+	{\addcontentsline{los}{simbolo}{#1}}#2
+}
+% Para aceitar comandos com @ (at) no nome
+\makeatletter 
+% \listadesimbolos: comando que imprime a lista de simbolos
+\newcommand{\listadesimbolos}
+{
+	\pretextualchapter{Lista de s��mbolos}
+	{\setlength{\parindent}{0cm}
+	\@starttoc{los}}
+}
+% Como a entrada sera impressa
+\newcommand\l@simbolo[2]{\par #1}
+\makeatother
+
+
+% Definicao da lista de abreviaturas e siglas
+% \abrv[entrada na lista de simbolos]{abreviatura}4:
+% Escreve a sigla/abreviatura no texto e uma entrada na lista de abreviaturas e siglas.
+% Se o parametro opcional e omitido, usa-se o parametro obrigatorio.
+\newcommand{\abrv}[2][]
+{%
+	\ifthenelse{\equal{#1}{}}
+	{\addcontentsline{loab}{abreviatura}{#2}}
+	{\addcontentsline{loab}{abreviatura}{#1}}#2
+}
+% Para aceitar comandos com @ (at) no nome
+\makeatletter 
+% \listadeabreviaturas: comando que imprime a lista de abreviaturas e siglas
+\newcommand{\listadeabreviaturas}
+{
+	\pretextualchapter{Lista de abreviaturas e siglas}
+	{\setlength{\parindent}{0cm}
+	\@starttoc{loab}}
+}
+% Como a entrada sera impressa
+\newcommand\l@abreviatura[2]{\par #1}
+\makeatother
+
+
+% \listofalgorithms: comando que imprime a lista de algoritmos
+\renewcommand{\listalgorithmname}{Lista de algoritmos}
+
+
+% Hifeniza������o de palavras feita de forma incorreta pelo LaTeX
+\hyphenation{PYTHON ou-tros}
+
+
+% Inicio do documento
+\begin{document}
+
+	\frenchspacing
+	
+	% Capa (arquivo Includes/Capa.tex)
+	\include{extra-includes/Capa}
+
+	% Folha de rosto (arquivo extra-includes/FolhaRosto.tex)
+	\include{extra-includes/FolhaRosto}	
+	
+	% Folha de aprovacao (arquivo extra-includes/FolhaAprovacao.tex)
+	\include{extra-includes/FolhaAprovacao}	
+	
+	% Dedicatoria (arquivo extra-includes/Dedicatoria.tex)
+	\include{extra-includes/Dedicatoria}
+	
+	% Agradecimentos (arquivo extra-includes/Agradecimentos.tex)
+	\include{extra-includes/Agradecimentos}
+   
+   % Epigrafe (arquivo extra-includes/Epigrafe.tex)
+	\include{extra-includes/Epigrafe}
+	
+	% Resumo em l���ngua vernacula (arquivo extra-includes/Resumo.tex)
+	\include{extra-includes/Resumo}
+	
+	% Abstract, resumo em l���ngua estrangeira (arquivo Include/Abstract.tex)
+	\include{extra-includes/Abstract}
+	
+	% Lista de figuras
+	\listoffigures
+	% Lista de tabelas
+	\listoftables
+	
+	% Lista de abreviaturas e siglas
+	\listadeabreviaturas
+	
+	% Lista de símbolos
+%	\listadesimbolos
+	
+	% Lista de algoritmos (se houver)
+	% Devem ser inclu���dos os pacotes algorithm e algorithmic
+	% \listofalgorithms
+	
+	% Sum���rio
+	\sumario
+
+	% Parte central do trabalho, englobando os cap��tulos que constituem o mesmo
+	% Os referidos cap��tulos devem ser organizados dentro do diret��rio "Cap��tulos"
+
+	% Capitulo 1: Introdu����o (arquivo Includes/Introducao.tex)
+	\include{capitulos/Introducao}
+	
+	% Capitulo 2: Segundo cap���tulo (arquivo Includes/FundamentalTeorica.tex)
+	\include{capitulos/FundamentalTeorica}
+	
+	% Capitulo 3: Terceiro cap���tulo (arquivo Includes/Desenvolvimento.tex)
+	\include{capitulos/Desenvolvimento}
+	
+	% Capitulo 4: Quarto cap���tulo (arquivo Includes/Capitulo4.tex)
+	\include{capitulos/Capitulo4}
+	
+	% Capitulo 5: Quinto cap���tulo (arquivo Includes/Capitulo5.tex)
+	\include{capitulos/Capitulo5}
+	
+	% Consideracoes finais
+	\include{capitulos/Consideracoes} 
+	
+	% Bibliografia (arquivo Capitulos/Referencias.bib)
+	\bibliography{capitulos/Referencias}
+	\bibliographystyle{abnt-alf}
+	
+	% Ap���ndice A (arquivo Includes/ApendiceA)
+	\include{capitulos/ApendiceA}
+	
+	% Anexo A (arquivo Includes/AnexoA)
+	\include{capitulos/AnexoA}
+	
+	% P���gina em branco
+	\newpage
+
+\end{document}
