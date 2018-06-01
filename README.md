@@ -56,8 +56,8 @@ TEXTO
 
     ```
     \begin{enumerate}
-       \item item1
-       \item item2
+       \item ITEM1;
+       \item ITEM2.
      \end{enumerate}
      ```
 
@@ -72,6 +72,8 @@ TEXTO
 ```
 
 O `htb` representa onde a imagem vai ficar alocada na página. O **h** é no centro, o **t** é de cima e o **b** para ser posicionada em baixo. Para força a posição em algum lugar, coloque **!** no início, como **[!htb]**.
+
+Outra coisa é que de acordo com as imagens que você vai colocando, já é montando uma lista de imagens em uma das contra capas. A descrição na lista é o que coloca em `caption`.
 
 - Abreviação: `\abrv[IFRN -- Instituto Federal do Rio Grande do Norte]{IFRN}`
 
