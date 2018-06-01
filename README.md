@@ -10,7 +10,7 @@ LaTeX é um conjunto de macros para o programa de diagramação de textos TeX, u
 
 Quando decidi usar o LaTeX para montar toda a estrutura da parte escrita do meu TCC, tive algumas dificuldades, apesar de ser uma línguagem de marcação, como a que estou usando para escrever esse texto. Pensei que provavelmente outros alunos do curso irão passar pelos mesmos problemas, então decidi montar um pequeno tutorial, para poupar o tempo que gastei. Espero que seja útil.
 
-## CRIAR UM NOVO PROJETO
+## Criar novo projeto
 
 1. [Baixe](http://diatinf.ifrn.edu.br/lib/exe/fetch.php?media=cursos:superiores:tads:praticas:tcc:modelo_tcc_latex-placido.zip) o modelo encontrado no site da DIATINF
 
@@ -18,7 +18,7 @@ Quando decidi usar o LaTeX para montar toda a estrutura da parte escrita do meu 
 
 3. Crie um novo projeto e faça o upload do zip baixado no item 1
 
-## USANDO
+## Usando
 
 Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácido](https://github.com/placidoneto) criou, que já inclui algumas bibliotecas que auxiliam na construção do texto. Se for iniciar um novo projeto do zero, dê um olhada neste (arquvio)[https://github.com/jonaselan/BNativus-artigo/blob/master/src/main.tex], que é aonde os arquivos e estas bibliotecas estão sendo importadas.
 
@@ -34,16 +34,17 @@ Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácid
 TEXTO
 \end{center}
 `
-- Capítulo: `\chapter{NOME}`
+- Capítulo: `\chapter{TEXTO}`
 
-- Seção: `\section{NOME}`
+- Seção: `\section{TEXTO}`
 
-- Subseção: ``
+- Subseção: `\subsection{TEXTO}`
 
 - Observação: `\todo[inline]{TEXTO}`
 
 - [Lista](https://pt.wikibooks.org/wiki/Latex/Itens)
-  - Normal
+
+  - Item
 
     ```
     \begin{itemize}
@@ -78,12 +79,13 @@ Ao especificar em qualquer lugar do texto, já adicionado a lista de abreviaçõ
 
 - Quebra da página: `\newpage`
 
-- Referência
-
 - Tabela: A forma mais fácil de criar tabelas é através de ferramentas online, como [essa](https://www.tablesgenerator.com/#) onde é você monta a tabela e o código latex é gerado.
 
-- Rodapé
+- Rodapé (nota explicativa): `\footnote{TEXTO}`
 
+  obs: a numeração é feita automaticamente
+
+- Referência:
 
 ## Contribuição
 
