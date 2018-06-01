@@ -8,41 +8,51 @@ LaTeX é um conjunto de macros para o programa de diagramação de textos TeX, u
 
 ## Motivação
 
-Quando decidi usar o LaTeX para montar toda a estrutura da parte escrita do meu TCC, tive algumas dificuldades, apesar de ser uma línguagem de marcação, como a que estou usando para escrever esse texto. Pensei que provavelmente outros alunos do curso irão passar pelos mesmos problemas, então decidi montar um pequeno tutorial, para poupar o tempo que gastei. Espero que seja útil.
+Quando decidi usar o LaTeX para montar toda a estrutura da parte escrita do meu TCC, tive algumas dificuldades, apesar de ser uma línguagem de marcação, como a que estou usando para escrever esse texto. Pensei que provavelmente outros alunos do curso iriam passar pelos mesmos problemas, então decidi montar um pequeno tutorial, para poupar o tempo que gastei. Espero que seja útil.
 
 ## Criar novo projeto
 
 1. [Baixe](http://diatinf.ifrn.edu.br/lib/exe/fetch.php?media=cursos:superiores:tads:praticas:tcc:modelo_tcc_latex-placido.zip) o modelo encontrado no site da DIATINF
 
-2. Vá até algum editor de LaTeX, como o overleaf ou Shared latex
+2. Vá até algum editor de LaTeX, como o Overleaf ou Shared latex
 
-3. Crie um novo projeto e faça o upload do zip baixado no item 1
+3. Crie um novo projeto
+
+4. Faça o upload do zip baixado no item 1
 
 ## Usando
 
 Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácido](https://github.com/placidoneto) criou, que já inclui algumas bibliotecas que auxiliam na construção do texto. Se for iniciar um novo projeto do zero, dê um olhada neste (arquvio)[https://github.com/jonaselan/BNativus-artigo/blob/master/src/main.tex], que é aonde os arquivos e estas bibliotecas estão sendo importadas.
 
-- Itálico: `\textit{TEXTO}`
+#### Itálico
 
-- Negrito: `\textbf{TEXTO} `
+`\textit{TEXTO}`
 
-- Sublinhado: `\underline{TEXTO}`
+#### Negrito
+`\textbf{TEXTO} `
 
-- Centralizar texto:
+#### Sublinhado
+`\underline{TEXTO}`
+
+#### Centralizar texto
 `
 \begin{center}
 TEXTO
 \end{center}
 `
-- Capítulo: `\chapter{TEXTO}`
+#### Capítulo
+`\chapter{TEXTO}`
 
-- Seção: `\section{TEXTO}`
+#### Seção
+`\section{TEXTO}`
 
-- Subseção: `\subsection{TEXTO}`
+#### Subseção
+`\subsection{TEXTO}`
 
-- Observação: `\todo[inline]{TEXTO}`
+#### Observação
+`\todo[inline]{TEXTO}`
 
-- [Lista](https://pt.wikibooks.org/wiki/Latex/Itens)
+#### [Lista](https://pt.wikibooks.org/wiki/Latex/Itens)
 
   - Item
 
@@ -61,7 +71,7 @@ TEXTO
      \end{enumerate}
      ```
 
-- [Imagem](https://www.sharelatex.com/learn/Inserting_Images)
+#### [Imagem](https://www.sharelatex.com/learn/Inserting_Images)
 
 ```
 \begin{figure}[htb]
@@ -75,19 +85,27 @@ O `htb` representa onde a imagem vai ficar alocada na página. O **h** é no cen
 
 Outra coisa é que de acordo com as imagens que você vai colocando, já é montando uma lista de imagens em uma das contra capas. A descrição na lista é o que coloca em `caption`.
 
-- Abreviação: `\abrv[IFRN -- Instituto Federal do Rio Grande do Norte]{IFRN}`
+#### Abreviação
+
+`\abrv[IFRN -- Instituto Federal do Rio Grande do Norte]{IFRN}`
 
 Ao especificar em qualquer lugar do texto, já adicionado a lista de abreviações.
 
-- Quebra da página: `\newpage`
+#### Quebra da página
 
-- Tabela: A forma mais fácil de criar tabelas é através de ferramentas online, como [essa](https://www.tablesgenerator.com/#) onde é você monta a tabela e o código latex é gerado.
+`\newpage`
 
-- Rodapé (nota explicativa): `\footnote{TEXTO}`
+#### Tabela
+
+A forma mais fácil de criar tabelas é através de ferramentas online, como [essa](https://www.tablesgenerator.com/#) onde é você monta a tabela e o código latex é gerado.
+
+#### Rodapé (nota explicativa)
+
+  `\footnote{TEXTO}`
 
   obs: a numeração é feita automaticamente
 
-- Referência:
+#### Referência
 
 ## Contribuição
 
