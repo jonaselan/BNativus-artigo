@@ -105,7 +105,30 @@ A forma mais fácil de criar tabelas é através de ferramentas online, como [es
 
   obs: a numeração é feita automaticamente
 
-#### Referência
+#### [Referência](http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/abntex2/doc/abntex2cite-alf.pdf)
+
+Para realizar as referências usasse o pacote **abntcite**. Há um [arquivo](https://github.com/jonaselan/BNativus-artigo/blob/master/src/capitulos/Referencias.bib) dentro do diretório capítulos, que contém alguns exemplos. É importante ressaltar que ele só irá aparecer na listagem a partir do momento que você o referencia no texto, por exemplo:
+
+```
+# definição
+
+@Book{Silberschatz,
+  author =       {Silberschatz, Abraham and
+                  Korth, Henry F. and
+                  Sudarshan, S.},
+  title =        {Database system concepts},
+  publisher =    {McGraw-Hill},
+  year =         {2002},
+  edition =      {4th},
+  address = {Boston}
+}
+```
+
+```
+# chamada
+
+\citeonline{Silberschatz}
+```
 
 ## Contribuição
 
