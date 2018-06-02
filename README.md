@@ -24,6 +24,8 @@ Quando decidi usar o LaTeX para montar toda a estrutura da parte escrita do meu 
 
 Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácido](https://github.com/placidoneto) criou, que já inclui algumas bibliotecas que auxiliam na construção do texto. Se for iniciar um novo projeto do zero, dê um olhada neste (arquvio)[https://github.com/jonaselan/BNativus-artigo/blob/master/src/main.tex], que é aonde os arquivos e estas bibliotecas estão sendo importadas.
 
+### Texto
+
 #### Itálico
 
 `\textit{TEXTO}`
@@ -34,12 +36,15 @@ Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácid
 #### Sublinhado
 `\underline{TEXTO}`
 
-#### Centralizar texto
+#### Centralizar
 `
 \begin{center}
 TEXTO
 \end{center}
 `
+
+### Estrutura
+
 #### Capítulo
 `\chapter{TEXTO}`
 
@@ -49,8 +54,16 @@ TEXTO
 #### Subseção
 `\subsection{TEXTO}`
 
+#### Subseção da subseção
+`\subsubsection{TEXTO}`
+
 #### Observação
 `\todo[inline]{TEXTO}`
+
+#### Quebra da página
+`\newpage`
+
+### Outros
 
 #### [Lista](https://pt.wikibooks.org/wiki/Latex/Itens)
 
@@ -90,10 +103,6 @@ Outra coisa é que de acordo com as imagens que você vai colocando, já é mont
 `\abrv[IFRN -- Instituto Federal do Rio Grande do Norte]{IFRN}`
 
 Ao especificar em qualquer lugar do texto, já adicionado a lista de abreviações.
-
-#### Quebra da página
-
-`\newpage`
 
 #### Tabela
 
