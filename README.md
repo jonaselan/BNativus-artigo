@@ -22,7 +22,7 @@ Quando decidi usar o LaTeX para montar toda a estrutura da parte escrita do meu 
 
 ## Usando
 
-Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácido](https://github.com/placidoneto) criou, que já inclui algumas bibliotecas que auxiliam na construção do texto. Se for iniciar um novo projeto do zero, dê um olhada neste (arquvio)[https://github.com/jonaselan/BNativus-artigo/blob/master/src/main.tex], que é aonde os arquivos e estas bibliotecas estão sendo importadas.
+Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácido](https://github.com/placidoneto) criou, que já inclui algumas bibliotecas que auxiliam na construção do texto. Se for iniciar um novo projeto do zero, dê um olhada neste [arquivo](https://github.com/jonaselan/BNativus-artigo/blob/master/src/main.tex), que é aonde os arquivos e estas bibliotecas estão sendo importadas.
 
 ### Texto
 
@@ -41,6 +41,26 @@ Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácid
 \begin{center}
 TEXTO
 \end{center}
+`
+
+#### Aspas 
+
+```
+``Texto entre aspas''
+```
+
+#### Citação
+`
+begin{quote}
+  TEXTO
+\end{quote}
+`
+ou
+
+`
+begin{quotation}
+  TEXTO
+\end{quotation}
 `
 
 ### Estrutura
