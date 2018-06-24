@@ -36,6 +36,18 @@ Os trechos de códigos a seguir são voltados para o modelo que o [Prof. Plácid
 #### Sublinhado
 `\underline{TEXTO}`
 
+#### Underline
+
+Há três formas de escrever um texto separado por underline
+
+```
+\texttt{Samp\_Dist\_Corr}
+
+\verb|Samp_Dist_Corr|
+
+\texttt{Samp\char`_Dist\char`_Corr}
+```
+
 #### Centralizar
 `
 \begin{center}
